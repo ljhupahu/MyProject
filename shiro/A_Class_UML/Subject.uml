@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.subject.Subject</OriginalElement>
+  <nodes>
+    <node x="110.0" y="0.0">org.apache.shiro.subject.Subject</node>
+    <node x="175.0" y="81.0">org.apache.shiro.web.subject.WebSubject</node>
+    <node x="65.0" y="162.0">org.apache.shiro.web.subject.support.WebDelegatingSubject</node>
+    <node x="0.0" y="81.0">org.apache.shiro.subject.support.DelegatingSubject</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.web.subject.support.WebDelegatingSubject" target="org.apache.shiro.subject.support.DelegatingSubject">
+      <point x="-45.5" y="-15.5" />
+      <point x="110.5" y="137.0" />
+      <point x="77.5" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.subject.support.DelegatingSubject" target="org.apache.shiro.subject.Subject">
+      <point x="0.0" y="-15.5" />
+      <point x="77.5" y="56.0" />
+      <point x="133.0" y="56.0" />
+      <point x="-23.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.subject.WebSubject" target="org.apache.shiro.subject.Subject">
+      <point x="0.0" y="-15.5" />
+      <point x="234.5" y="56.0" />
+      <point x="179.0" y="56.0" />
+      <point x="23.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.subject.support.WebDelegatingSubject" target="org.apache.shiro.web.subject.WebSubject">
+      <point x="45.5" y="-15.5" />
+      <point x="201.5" y="137.0" />
+      <point x="234.5" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="-7.5" y="15.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

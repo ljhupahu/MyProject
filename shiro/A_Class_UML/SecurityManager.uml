@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.mgt.SecurityManager</OriginalElement>
+  <nodes>
+    <node x="18.0" y="162.0">org.apache.shiro.mgt.CachingSecurityManager</node>
+    <node x="142.36764705882348" y="81.0">org.apache.shiro.mgt.SecurityManager</node>
+    <node x="8.0" y="405.0">org.apache.shiro.mgt.AuthorizingSecurityManager</node>
+    <node x="16.0" y="486.0">org.apache.shiro.mgt.SessionsSecurityManager</node>
+    <node x="20.5" y="567.0">org.apache.shiro.mgt.DefaultSecurityManager</node>
+    <node x="157.25" y="0.0">org.apache.shiro.authz.Authorizer</node>
+    <node x="10.25" y="0.0">org.apache.shiro.authc.Authenticator</node>
+    <node x="0.0" y="324.0">org.apache.shiro.mgt.AuthenticatingSecurityManager</node>
+    <node x="232.0" y="162.0">org.apache.shiro.web.mgt.WebSecurityManager</node>
+    <node x="287.25" y="0.0">org.apache.shiro.session.mgt.SessionManager</node>
+    <node x="23.0" y="243.0">org.apache.shiro.mgt.RealmSecurityManager</node>
+    <node x="108.36764705882345" y="648.0">org.apache.shiro.web.mgt.DefaultWebSecurityManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.mgt.SecurityManager" target="org.apache.shiro.authc.Authenticator">
+      <point x="-49.333333333333314" y="-15.5" />
+      <point x="167.03431372549016" y="56.0" />
+      <point x="73.75" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.WebSecurityManager" target="org.apache.shiro.mgt.SecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="319.5" y="137.0" />
+      <point x="253.36764705882348" y="137.0" />
+      <point x="37.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.web.mgt.WebSecurityManager">
+      <point x="54.00000000000003" y="-15.5" />
+      <point x="270.3676470588235" y="623.0" />
+      <point x="319.5" y="623.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthenticatingSecurityManager" target="org.apache.shiro.mgt.RealmSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.CachingSecurityManager" target="org.apache.shiro.mgt.SecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="115.0" y="137.0" />
+      <point x="179.36764705882348" y="137.0" />
+      <point x="-37.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthorizingSecurityManager" target="org.apache.shiro.mgt.AuthenticatingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.mgt.DefaultSecurityManager">
+      <point x="-53.99999999999997" y="-15.5" />
+      <point x="162.36764705882348" y="623.0" />
+      <point x="115.0" y="623.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SecurityManager" target="org.apache.shiro.authz.Authorizer">
+      <point x="2.8421709430404007E-14" y="-15.5" />
+      <point x="216.3676470588235" y="56.0" />
+      <point x="212.25" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SessionsSecurityManager" target="org.apache.shiro.mgt.AuthorizingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SecurityManager" target="org.apache.shiro.session.mgt.SessionManager">
+      <point x="49.33333333333334" y="-15.5" />
+      <point x="265.7009803921568" y="56.0" />
+      <point x="360.75" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.DefaultSecurityManager" target="org.apache.shiro.mgt.SessionsSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.RealmSecurityManager" target="org.apache.shiro.mgt.CachingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="212.0" y="357.0" />
+  <SelectedNodes>
+    <node>org.apache.shiro.mgt.CachingSecurityManager</node>
+    <node>org.apache.shiro.mgt.SecurityManager</node>
+    <node>org.apache.shiro.mgt.AuthorizingSecurityManager</node>
+    <node>org.apache.shiro.mgt.SessionsSecurityManager</node>
+    <node>org.apache.shiro.mgt.DefaultSecurityManager</node>
+    <node>org.apache.shiro.authz.Authorizer</node>
+    <node>org.apache.shiro.authc.Authenticator</node>
+    <node>org.apache.shiro.mgt.AuthenticatingSecurityManager</node>
+    <node>org.apache.shiro.web.mgt.WebSecurityManager</node>
+    <node>org.apache.shiro.session.mgt.SessionManager</node>
+    <node>org.apache.shiro.mgt.RealmSecurityManager</node>
+    <node>org.apache.shiro.web.mgt.DefaultWebSecurityManager</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
