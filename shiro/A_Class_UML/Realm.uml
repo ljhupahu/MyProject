@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.realm.Realm</OriginalElement>
+  <nodes>
+    <node x="0.0" y="480.0">org.apache.shiro.realm.text.IniRealm</node>
+    <node x="28.890625" y="160.0">org.apache.shiro.authz.Authorizer</node>
+    <node x="387.390625" y="320.0">org.apache.shiro.realm.ldap.AbstractLdapRealm</node>
+    <node x="604.390625" y="80.0">org.apache.shiro.realm.CachingRealm</node>
+    <node x="220.390625" y="320.0">org.apache.shiro.realm.ldap.DefaultLdapRealm</node>
+    <node x="381.890625" y="160.0">org.apache.shiro.authz.permission.PermissionResolverAware</node>
+    <node x="28.890625" y="400.0">org.apache.shiro.realm.text.TextConfigurationRealm</node>
+    <node x="153.890625" y="160.0">org.apache.shiro.authz.permission.RolePermissionResolverAware</node>
+    <node x="381.890625" y="400.0">org.apache.shiro.realm.activedirectory.ActiveDirectoryRealm</node>
+    <node x="626.390625" y="0.0">org.apache.shiro.realm.Realm</node>
+    <node x="36.390625" y="320.0">org.apache.shiro.realm.SimpleAccountRealm</node>
+    <node x="116.0" y="480.0">org.apache.shiro.realm.text.PropertiesRealm</node>
+    <node x="304.0" y="240.0">org.apache.shiro.realm.AuthorizingRealm</node>
+    <node x="228.890625" y="400.0">org.apache.shiro.realm.ldap.JndiLdapRealm</node>
+    <node x="560.390625" y="320.0">org.apache.shiro.realm.jdbc.JdbcRealm</node>
+    <node x="586.890625" y="160.0">org.apache.shiro.realm.AuthenticatingRealm</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.realm.AuthenticatingRealm" target="org.apache.shiro.realm.CachingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.JndiLdapRealm" target="org.apache.shiro.realm.ldap.DefaultLdapRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.jdbc.JdbcRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="613.890625" y="290.0" />
+      <point x="430.875" y="290.0" />
+      <point x="54.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.activedirectory.ActiveDirectoryRealm" target="org.apache.shiro.realm.ldap.AbstractLdapRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.SimpleAccountRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="118.390625" y="290.0" />
+      <point x="322.125" y="290.0" />
+      <point x="-54.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.DefaultLdapRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="293.890625" y="300.0" />
+      <point x="358.375" y="300.0" />
+      <point x="-18.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthorizingRealm" target="org.apache.shiro.authz.permission.RolePermissionResolverAware">
+      <point x="-18.125" y="-15.0" />
+      <point x="358.375" y="210.0" />
+      <point x="257.890625" y="210.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthorizingRealm" target="org.apache.shiro.authz.Authorizer">
+      <point x="-54.375" y="-15.0" />
+      <point x="322.125" y="220.0" />
+      <point x="81.390625" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.TextConfigurationRealm" target="org.apache.shiro.realm.SimpleAccountRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.IniRealm" target="org.apache.shiro.realm.text.TextConfigurationRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="48.0" y="455.0" />
+      <point x="73.640625" y="455.0" />
+      <point x="-44.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthorizingRealm" target="org.apache.shiro.authz.permission.PermissionResolverAware">
+      <point x="18.125" y="-15.0" />
+      <point x="394.625" y="210.0" />
+      <point x="474.390625" y="210.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.AbstractLdapRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="463.890625" y="300.0" />
+      <point x="394.625" y="300.0" />
+      <point x="18.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthorizingRealm" target="org.apache.shiro.realm.AuthenticatingRealm">
+      <point x="54.375" y="-15.0" />
+      <point x="430.875" y="220.0" />
+      <point x="667.890625" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.CachingRealm" target="org.apache.shiro.realm.Realm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.PropertiesRealm" target="org.apache.shiro.realm.text.TextConfigurationRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="184.0" y="455.0" />
+      <point x="163.140625" y="455.0" />
+      <point x="44.75" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="243.0" y="199.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,16 @@
+@startuml
+'Subject接口中包含一个静态内部类Builder， 它使用建造者模式来创建一个Subject。
+
+class SecurityUtils{
+    Subject getSubject()
+}
+class Builder{
+    Subject buildSubject()
+}
+
+Interface Subject
+
+Subject <. Builder
+Builder --o SecurityUtils
+
+@enduml

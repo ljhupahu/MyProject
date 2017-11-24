@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.authc.Authenticator</OriginalElement>
+  <nodes>
+    <node x="136.0" y="80.0">org.apache.shiro.mgt.SecurityManager</node>
+    <node x="17.5" y="160.0">org.apache.shiro.mgt.CachingSecurityManager</node>
+    <node x="8.5" y="400.0">org.apache.shiro.mgt.AuthorizingSecurityManager</node>
+    <node x="17.5" y="480.0">org.apache.shiro.mgt.SessionsSecurityManager</node>
+    <node x="403.5" y="160.0">org.apache.shiro.authc.pam.ModularRealmAuthenticator</node>
+    <node x="420.5" y="80.0">org.apache.shiro.authc.AbstractAuthenticator</node>
+    <node x="20.5" y="560.0">org.apache.shiro.mgt.DefaultSecurityManager</node>
+    <node x="262.375" y="0.0">org.apache.shiro.authc.Authenticator</node>
+    <node x="0.0" y="320.0">org.apache.shiro.mgt.AuthenticatingSecurityManager</node>
+    <node x="220.5" y="160.0">org.apache.shiro.web.mgt.WebSecurityManager</node>
+    <node x="105.0" y="640.0">org.apache.shiro.web.mgt.DefaultWebSecurityManager</node>
+    <node x="23.0" y="240.0">org.apache.shiro.mgt.RealmSecurityManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.mgt.SecurityManager" target="org.apache.shiro.authc.Authenticator">
+      <point x="0.0" y="-15.0" />
+      <point x="205.5" y="55.0" />
+      <point x="293.125" y="55.0" />
+      <point x="-30.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.WebSecurityManager" target="org.apache.shiro.mgt.SecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="302.0" y="135.0" />
+      <point x="240.25" y="135.0" />
+      <point x="34.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.web.mgt.WebSecurityManager">
+      <point x="50.25" y="-15.0" />
+      <point x="255.75" y="615.0" />
+      <point x="302.0" y="615.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthenticatingSecurityManager" target="org.apache.shiro.mgt.RealmSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.CachingSecurityManager" target="org.apache.shiro.mgt.SecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="109.0" y="135.0" />
+      <point x="170.75" y="135.0" />
+      <point x="-34.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.pam.ModularRealmAuthenticator" target="org.apache.shiro.authc.AbstractAuthenticator">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.mgt.DefaultSecurityManager">
+      <point x="-50.25" y="-15.0" />
+      <point x="155.25" y="615.0" />
+      <point x="109.0" y="615.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthorizingSecurityManager" target="org.apache.shiro.mgt.AuthenticatingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SessionsSecurityManager" target="org.apache.shiro.mgt.AuthorizingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.AbstractAuthenticator" target="org.apache.shiro.authc.Authenticator">
+      <point x="0.0" y="-15.0" />
+      <point x="504.0" y="55.0" />
+      <point x="354.625" y="55.0" />
+      <point x="30.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.DefaultSecurityManager" target="org.apache.shiro.mgt.SessionsSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.RealmSecurityManager" target="org.apache.shiro.mgt.CachingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="61.5" y="235.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
