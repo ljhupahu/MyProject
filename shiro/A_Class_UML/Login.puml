@@ -8,7 +8,7 @@ SecurityManager <|.. CachingSecurityManager
 CachingSecurityManager <|-- RealmSecurityManager
 RealmSecurityManager <|-- AuthenticatingSecurityManager
 AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
-git 
+
 
 AuthorizingSecurityManager <|-- SessionSecurityManager
 SessionSecurityManager <|-- DefaultSecurityManager
