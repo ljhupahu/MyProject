@@ -1,0 +1,16 @@
+@startuml
+
+interface SecurityManager
+
+Authenticator <|-- SecurityManager
+Authorizer <|-- SecurityManager
+SecurityManager <|.. CachingSecurityManager
+CachingSecurityManager <|-- RealmSecurityManager
+RealmSecurityManager <|-- AuthenticatingSecurityManager
+AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
+git 
+
+AuthorizingSecurityManager <|-- SessionSecurityManager
+SessionSecurityManager <|-- DefaultSecurityManager
+DefaultSecurityManager <|-- DefaultWebSecurityManager
+@enduml

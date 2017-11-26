@@ -1,0 +1,12 @@
+@startuml
+/'
+    This diagram describes how do a subject login.
+'/
+
+Client -> DelegatingSubject:login
+DelegatingSubject -> DefaultSecurityManager:login(Subject, token)
+DefaultSecurityManager -> AuthenticatingSecurityManager:authenticate(token);
+AuthenticatingSecurityManager -> AbstractAuthenticator: authenticate(token)
+AbstractAuthenticator -> ModularRealmAuthenticator: doAuthenticate(token)
+
+@enduml

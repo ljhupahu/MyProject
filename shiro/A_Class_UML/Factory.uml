@@ -7,8 +7,8 @@
     <node x="154.0" y="162.0">org.apache.shiro.config.IniFactorySupport</node>
     <node x="237.5" y="243.0">org.apache.shiro.web.config.IniFilterChainResolverFactory</node>
     <node x="267.75" y="0.0">org.apache.shiro.util.Factory</node>
-    <node x="0.0" y="324.0">org.apache.shiro.web.config.WebIniSecurityManagerFactory</node>
     <node x="320.5" y="81.0">org.apache.shiro.jndi.JndiObjectFactory</node>
+    <node x="0.0" y="324.0">org.apache.shiro.web.config.WebIniSecurityManagerFactory</node>
     <node x="160.5" y="81.0">org.apache.shiro.util.AbstractFactory</node>
   </nodes>
   <notes />
@@ -33,27 +33,22 @@
       <point x="192.25" y="218.0" />
       <point x="-38.25" y="15.5" />
     </edge>
-    <edge source="org.apache.shiro.web.config.IniFilterChainResolverFactory" target="org.apache.shiro.config.IniFactorySupport">
-      <point x="0.0" y="-15.5" />
-      <point x="345.5" y="218.0" />
-      <point x="268.75" y="218.0" />
-      <point x="38.25" y="15.5" />
-    </edge>
     <edge source="org.apache.shiro.util.AbstractFactory" target="org.apache.shiro.util.Factory">
       <point x="0.0" y="-15.5" />
       <point x="230.5" y="56.0" />
       <point x="290.75" y="56.0" />
       <point x="-23.0" y="15.5" />
     </edge>
+    <edge source="org.apache.shiro.web.config.IniFilterChainResolverFactory" target="org.apache.shiro.config.IniFactorySupport">
+      <point x="0.0" y="-15.5" />
+      <point x="345.5" y="218.0" />
+      <point x="268.75" y="218.0" />
+      <point x="38.25" y="15.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="46.0" y="15.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="294.0" y="176.5" />
   <SelectedNodes>
-    <node>org.apache.shiro.config.IniSecurityManagerFactory</node>
-    <node>org.apache.shiro.config.IniFactorySupport</node>
-    <node>org.apache.shiro.web.config.IniFilterChainResolverFactory</node>
-    <node>org.apache.shiro.web.config.WebIniSecurityManagerFactory</node>
-    <node>org.apache.shiro.jndi.JndiObjectFactory</node>
-    <node>org.apache.shiro.util.AbstractFactory</node>
+    <node>org.apache.shiro.util.Factory</node>
   </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>

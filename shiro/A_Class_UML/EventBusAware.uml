@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.event.EventBusAware</OriginalElement>
+  <nodes>
+    <node x="18.0" y="81.0">org.apache.shiro.mgt.CachingSecurityManager</node>
+    <node x="16.0" y="405.0">org.apache.shiro.mgt.SessionsSecurityManager</node>
+    <node x="8.0" y="324.0">org.apache.shiro.mgt.AuthorizingSecurityManager</node>
+    <node x="246.0" y="324.0">org.apache.shiro.web.session.mgt.DefaultWebSessionManager</node>
+    <node x="20.5" y="486.0">org.apache.shiro.mgt.DefaultSecurityManager</node>
+    <node x="0.0" y="243.0">org.apache.shiro.mgt.AuthenticatingSecurityManager</node>
+    <node x="259.5" y="243.0">org.apache.shiro.session.mgt.DefaultSessionManager</node>
+    <node x="227.0" y="162.0">org.apache.shiro.session.mgt.AbstractValidatingSessionManager</node>
+    <node x="165.25" y="0.0">org.apache.shiro.event.EventBusAware</node>
+    <node x="237.5" y="81.0">org.apache.shiro.session.mgt.AbstractNativeSessionManager</node>
+    <node x="23.0" y="162.0">org.apache.shiro.mgt.RealmSecurityManager</node>
+    <node x="7.0" y="567.0">org.apache.shiro.web.mgt.DefaultWebSecurityManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.session.mgt.DefaultSessionManager" target="org.apache.shiro.session.mgt.AbstractValidatingSessionManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.CachingSecurityManager" target="org.apache.shiro.event.EventBusAware">
+      <point x="0.0" y="-15.5" />
+      <point x="115.0" y="56.0" />
+      <point x="199.75" y="56.0" />
+      <point x="-34.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.AbstractNativeSessionManager" target="org.apache.shiro.event.EventBusAware">
+      <point x="0.0" y="-15.5" />
+      <point x="353.5" y="56.0" />
+      <point x="268.75" y="56.0" />
+      <point x="34.5" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.session.mgt.DefaultWebSessionManager" target="org.apache.shiro.session.mgt.DefaultSessionManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthenticatingSecurityManager" target="org.apache.shiro.mgt.RealmSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthorizingSecurityManager" target="org.apache.shiro.mgt.AuthenticatingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.mgt.DefaultSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SessionsSecurityManager" target="org.apache.shiro.mgt.AuthorizingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.DefaultSecurityManager" target="org.apache.shiro.mgt.SessionsSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.AbstractValidatingSessionManager" target="org.apache.shiro.session.mgt.AbstractNativeSessionManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.RealmSecurityManager" target="org.apache.shiro.mgt.CachingSecurityManager">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="69.0" y="155.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
