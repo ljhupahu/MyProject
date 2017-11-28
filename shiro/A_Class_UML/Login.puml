@@ -1,16 +1,52 @@
 @startuml
 
 interface SecurityManager
+interface Realm{
+    getAuthenticationInfo(AuthenticationToken token);
+}
 
+interface Authenticator{
+    authenticate(AuthenticationToken authenticationToken)
+}
+
+interface Authorizer{
+    boolean isPermitted();
+    void checkPermission();
+    boolean hasRole();
+}
+
+interface AuthenticationInfo{
+    getPrincipals()
+}
+
+AuthenticationInfo <|-- SaltedAuthenticationInfo
+AuthenticationInfo <|-- Account
+Account <|.. SimpleAccount
+SaltedAuthenticationInfo <|-.. SimpleAuthenticationInfo
+SimpleAccount <-- AuthenticatingRealm
+
+Authenticator <-- AuthenticatingSecurityManager
 Authenticator <|-- SecurityManager
+Authenticator <|-- AbstractAuthenticator
+AbstractAuthenticator <|-- ModularRealmAuthenticator
+
 Authorizer <|-- SecurityManager
+Authorizer <-- AuthorizingSecurityManager
+Authorizer <|-- ModularRealmAuthorizer
+
 SecurityManager <|.. CachingSecurityManager
 CachingSecurityManager <|-- RealmSecurityManager
 RealmSecurityManager <|-- AuthenticatingSecurityManager
+
 AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
-
-
 AuthorizingSecurityManager <|-- SessionSecurityManager
+
 SessionSecurityManager <|-- DefaultSecurityManager
 DefaultSecurityManager <|-- DefaultWebSecurityManager
+
+Realm <|.. CachingRealm
+CachingRealm <|-- AuthenticatingRealm
+AuthenticatingRealm <- ModularRealmAuthenticator
+
+
 @enduml

@@ -8,5 +8,5 @@ DelegatingSubject -> DefaultSecurityManager:login(Subject, token)
 DefaultSecurityManager -> AuthenticatingSecurityManager:authenticate(token);
 AuthenticatingSecurityManager -> AbstractAuthenticator: authenticate(token)
 AbstractAuthenticator -> ModularRealmAuthenticator: doAuthenticate(token)
-
+ModularRealmAuthenticator -> Realm: getAuthenticationInfo(token)
 @enduml
