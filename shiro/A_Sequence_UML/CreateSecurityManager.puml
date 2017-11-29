@@ -1,0 +1,17 @@
+@startuml
+' Create securityManager by basic ini configuration.
+' The configuration like following:
+'[users]
+'zhang=123
+'wang=123
+
+    Client -> AbstractFactory: getInstance()
+    AbstractFactory -> IniFactorySupport: createInstance()
+    IniFactorySupport -> IniSecurityManagerFactory: createInstance(ini)
+    IniSecurityManagerFactory -> IniSecurityManagerFactory: createSecurityManager(Ini ini, Ini.Section mainSection)
+    note left: create Map object for following items: \n1. create default security manager (DefaultSecurityManager) \n2. set realm for users or user roles \n3. set other configurations \n4. set EventBus
+    IniSecurityManagerFactory -> IniSecurityManagerFactory: isAutoApplyRealms(securityManager)
+    note left: only apply realms if they haven't been explicitly set by the user:
+    IniSecurityManagerFactory -> IniSecurityManagerFactory: applyRealmsToSecurityManager(realms, securityManager);
+    note left: set realms for securityManager
+@enduml
