@@ -19,34 +19,42 @@ interface AuthenticationInfo{
     getPrincipals()
 }
 
-AuthenticationInfo <|-- SaltedAuthenticationInfo
-AuthenticationInfo <|-- Account
-Account <|.. SimpleAccount
-SaltedAuthenticationInfo <|-.. SimpleAuthenticationInfo
-SimpleAccount <-- AuthenticatingRealm
+interface CredentialsMatcher{
+    boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info)
+}
 
-Authenticator <-- AuthenticatingSecurityManager
+class ModularRealmAuthenticator{
+    'Attempts to authenticate the given token by iterating over the internal collection of
+    doAuthenticate(AuthenticationToken)
+}
+
+class AuthenticatingRealm{
+    getAuthenticationInfo(AuthenticationToken token)
+}
+
 Authenticator <|-- SecurityManager
-Authenticator <|-- AbstractAuthenticator
-AbstractAuthenticator <|-- ModularRealmAuthenticator
-
-Authorizer <|-- SecurityManager
-Authorizer <-- AuthorizingSecurityManager
-Authorizer <|-- ModularRealmAuthorizer
-
 SecurityManager <|.. CachingSecurityManager
 CachingSecurityManager <|-- RealmSecurityManager
 RealmSecurityManager <|-- AuthenticatingSecurityManager
-
 AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
 AuthorizingSecurityManager <|-- SessionSecurityManager
-
 SessionSecurityManager <|-- DefaultSecurityManager
 DefaultSecurityManager <|-- DefaultWebSecurityManager
 
 Realm <|.. CachingRealm
 CachingRealm <|-- AuthenticatingRealm
-AuthenticatingRealm <- ModularRealmAuthenticator
+AuthenticatingRealm <|-- AuthorizaingRealm
+AuthorizaingRealm <|-- SimpleAccountRealm
+SimpleAccountRealm <|-- IniRealm
+IniRealm <-- ModularRealmAuthenticator
 
+Authenticator <|-- AbstractAuthenticator
+AbstractAuthenticator <|-- ModularRealmAuthenticator
+
+ModularRealmAuthenticator <-- AuthenticatingSecurityManager
+
+CredentialsMatcher <|.. SimpleCredentialsMatcher
+
+SimpleCredentialsMatcher <- AuthenticatingRealm
 
 @enduml
