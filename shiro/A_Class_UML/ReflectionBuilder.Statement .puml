@@ -1,0 +1,13 @@
+@startuml
+
+abstract class ReflectionBuilder.Statement{
+    protected final String lhs;
+    protected final String rhs;
+    protected Object bean;
+    private Object result;
+    abstract Object doExecute();
+}
+
+ReflectionBuilder.Statement <|-- ReflectionBuilder.AssignmentStatement
+ReflectionBuilder.Statement <|-- ReflectionBuilder.InstantiationStatement
+@enduml

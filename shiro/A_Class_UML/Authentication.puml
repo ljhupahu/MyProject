@@ -9,18 +9,13 @@ interface Authenticator{
     authenticate(AuthenticationToken authenticationToken)
 }
 
-interface Authorizer{
-    boolean isPermitted();
-    void checkPermission();
-    boolean hasRole();
+interface CredentialsMatcher{
+    boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info)
 }
 
 interface AuthenticationInfo{
-    getPrincipals()
-}
-
-interface CredentialsMatcher{
-    boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info)
+    PrincipalCollection getPrincipals();
+    Object getCredentials();
 }
 
 class ModularRealmAuthenticator{
@@ -32,6 +27,12 @@ class AuthenticatingRealm{
     getAuthenticationInfo(AuthenticationToken token)
 }
 
+class SimpleAccountRealm{
+    doGetAuthenticationInfo(AuthenticationToken token)
+}
+
+
+'--------------------------------SecurityManager----------------------------------
 Authenticator <|-- SecurityManager
 SecurityManager <|.. CachingSecurityManager
 CachingSecurityManager <|-- RealmSecurityManager
@@ -40,21 +41,41 @@ AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
 AuthorizingSecurityManager <|-- SessionSecurityManager
 SessionSecurityManager <|-- DefaultSecurityManager
 DefaultSecurityManager <|-- DefaultWebSecurityManager
+'--------------------------------SecurityManager----------------------------------
 
+
+'--------------------------------Realm--------------------------------------------
 Realm <|.. CachingRealm
 CachingRealm <|-- AuthenticatingRealm
 AuthenticatingRealm <|-- AuthorizaingRealm
 AuthorizaingRealm <|-- SimpleAccountRealm
 SimpleAccountRealm <|-- IniRealm
 IniRealm <-- ModularRealmAuthenticator
+'--------------------------------Realm---------------------------------------------
 
+
+'--------------------------------Authenticator--------------------------------------
 Authenticator <|-- AbstractAuthenticator
 AbstractAuthenticator <|-- ModularRealmAuthenticator
-
 ModularRealmAuthenticator <-- AuthenticatingSecurityManager
+'--------------------------------Authenticator---------------------------------------
 
+
+'--------------------------------CredentialsMatcher----------------------------------
 CredentialsMatcher <|.. SimpleCredentialsMatcher
-
 SimpleCredentialsMatcher <- AuthenticatingRealm
+'--------------------------------CredentialsMatcher----------------------------------
+
+
+'--------------------------------AuthenticationInfo----------------------------------
+AuthenticationInfo <|-- MergableAuthenticationInfo
+AuthenticationInfo <|-- SaltedAuthenticationInfo
+MergableAuthenticationInfo <|.. SimpleAuthenticationInfo
+SaltedAuthenticationInfo <|.. SimpleAuthenticationInfo
+
+AuthenticationInfo <|-- Account
+Account <|.. SimpleAccount
+AuthenticationInfo <-- SimpleAccountRealm
+'--------------------------------AuthenticationInfo----------------------------------
 
 @enduml
