@@ -102,17 +102,17 @@
       <point x="276.49731182795705" y="233.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="org.apache.shiro.authz.ModularRealmAuthorizer" target="org.apache.shiro.authz.permission.PermissionResolverAware">
-      <point x="65.33333333333337" y="-15.5" />
-      <point x="542.8239247311828" y="233.0" />
-      <point x="741.125" y="233.0" />
-      <point x="-49.75" y="15.5" />
-    </edge>
     <edge source="org.apache.shiro.authz.ModularRealmAuthorizer" target="org.apache.shiro.authz.permission.RolePermissionResolverAware">
       <point x="0.0" y="-15.5" />
       <point x="477.4905913978494" y="233.0" />
       <point x="502.625" y="233.0" />
       <point x="-56.25" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.authz.ModularRealmAuthorizer" target="org.apache.shiro.authz.permission.PermissionResolverAware">
+      <point x="65.33333333333337" y="-15.5" />
+      <point x="542.8239247311828" y="233.0" />
+      <point x="741.125" y="233.0" />
+      <point x="-49.75" y="15.5" />
     </edge>
     <edge source="org.apache.shiro.mgt.AuthorizingSecurityManager" target="org.apache.shiro.mgt.AuthenticatingSecurityManager">
       <point x="0.0" y="-15.5" />
@@ -181,7 +181,7 @@
       <point x="-47.25" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="804.0" y="241.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="804.0" y="242.0" />
   <SelectedNodes>
     <node>org.apache.shiro.realm.AuthenticatingRealm</node>
   </SelectedNodes>

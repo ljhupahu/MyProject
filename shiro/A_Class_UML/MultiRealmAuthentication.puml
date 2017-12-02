@@ -1,0 +1,74 @@
+@startuml
+
+interface SecurityManager
+
+
+interface Authenticator{
+    authenticate(AuthenticationToken authenticationToken)
+}
+
+
+
+interface AuthenticationInfo{
+    PrincipalCollection getPrincipals();
+    Object getCredentials();
+}
+
+interface AuthenticationStrategy{
+    beforeAllAttempts();
+    beforeAttempt();
+    afterAttempt();
+    afterAllAttempts();
+}
+
+class ModularRealmAuthenticator{
+    'Attempts to authenticate the given token by iterating over the internal collection of
+    doAuthenticate(AuthenticationToken)
+    doMultiRealmAuthentication(Collection<Realm>, AuthenticationToken)
+}
+
+
+
+
+
+
+'--------------------------------SecurityManager----------------------------------
+Authenticator <|-- SecurityManager
+SecurityManager <|.. CachingSecurityManager
+CachingSecurityManager <|-- RealmSecurityManager
+RealmSecurityManager <|-- AuthenticatingSecurityManager
+AuthenticatingSecurityManager <|-- AuthorizingSecurityManager
+AuthorizingSecurityManager <|-- SessionSecurityManager
+SessionSecurityManager <|-- DefaultSecurityManager
+DefaultSecurityManager <|-- DefaultWebSecurityManager
+'--------------------------------SecurityManager----------------------------------
+
+
+
+'--------------------------------Authenticator--------------------------------------
+Authenticator <|-- AbstractAuthenticator
+AbstractAuthenticator <|-- ModularRealmAuthenticator
+ModularRealmAuthenticator <-- AuthenticatingSecurityManager
+'--------------------------------Authenticator---------------------------------------
+
+'--------------------------------AuthenticationStrategy------------------------------
+AuthenticationStrategy <|.. AbstractAuthenticationStrategy
+AbstractAuthenticationStrategy <|-- FirstSuccessfulStrategy
+AbstractAuthenticationStrategy <|-- AllSuccessfulStrategy
+AbstractAuthenticationStrategy <|-- AtLeastTwoAuthenticatorStrategy
+AbstractAuthenticationStrategy <|-- OnlyOneAuthenticatorStrategy
+AuthenticationStrategy <- ModularRealmAuthenticator
+'--------------------------------AuthenticationStrategy------------------------------
+
+'--------------------------------AuthenticationInfo----------------------------------
+AuthenticationInfo <|-- MergableAuthenticationInfo
+AuthenticationInfo <|-- SaltedAuthenticationInfo
+MergableAuthenticationInfo <|.. SimpleAuthenticationInfo
+SaltedAuthenticationInfo <|.. SimpleAuthenticationInfo
+
+AuthenticationInfo <|-- Account
+Account <|.. SimpleAccount
+AuthenticationInfo <-- AuthenticationStrategy
+'--------------------------------AuthenticationInfo----------------------------------
+
+@enduml
