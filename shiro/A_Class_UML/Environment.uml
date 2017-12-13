@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.env.Environment</OriginalElement>
+  <nodes>
+    <node x="81.0" y="320.0">org.apache.shiro.web.env.ResourceBasedWebEnvironment</node>
+    <node x="114.0" y="400.0">org.apache.shiro.web.env.IniWebEnvironment</node>
+    <node x="216.0" y="80.0">org.apache.shiro.web.env.WebEnvironment</node>
+    <node x="132.5" y="0.0">org.apache.shiro.env.Environment</node>
+    <node x="105.5" y="480.0">com.github.zhangkaitao.shiro.chapter8.web.env.MyIniWebEnvironment</node>
+    <node x="0.0" y="80.0">org.apache.shiro.env.NamedObjectEnvironment</node>
+    <node x="101.5" y="240.0">org.apache.shiro.web.env.DefaultWebEnvironment</node>
+    <node x="18.0" y="160.0">org.apache.shiro.env.DefaultEnvironment</node>
+    <node x="194.0" y="160.0">org.apache.shiro.web.env.MutableWebEnvironment</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.env.NamedObjectEnvironment" target="org.apache.shiro.env.Environment">
+      <point x="0.0" y="-15.0" />
+      <point x="96.0" y="55.0" />
+      <point x="162.0" y="55.0" />
+      <point x="-29.5" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter8.web.env.MyIniWebEnvironment" target="org.apache.shiro.web.env.IniWebEnvironment">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.WebEnvironment" target="org.apache.shiro.env.Environment">
+      <point x="0.0" y="-15.0" />
+      <point x="287.0" y="55.0" />
+      <point x="221.0" y="55.0" />
+      <point x="29.5" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.IniWebEnvironment" target="org.apache.shiro.web.env.ResourceBasedWebEnvironment">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.env.DefaultEnvironment" target="org.apache.shiro.env.NamedObjectEnvironment">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.DefaultWebEnvironment" target="org.apache.shiro.env.DefaultEnvironment">
+      <point x="-45.0" y="-15.0" />
+      <point x="146.5" y="215.0" />
+      <point x="96.0" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.ResourceBasedWebEnvironment" target="org.apache.shiro.web.env.DefaultWebEnvironment">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.DefaultWebEnvironment" target="org.apache.shiro.web.env.MutableWebEnvironment">
+      <point x="45.0" y="-15.0" />
+      <point x="236.5" y="215.0" />
+      <point x="287.0" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.env.MutableWebEnvironment" target="org.apache.shiro.web.env.WebEnvironment">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="175.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
