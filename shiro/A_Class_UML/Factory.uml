@@ -33,23 +33,21 @@
       <point x="192.25" y="218.0" />
       <point x="-38.25" y="15.5" />
     </edge>
-    <edge source="org.apache.shiro.util.AbstractFactory" target="org.apache.shiro.util.Factory">
-      <point x="0.0" y="-15.5" />
-      <point x="230.5" y="56.0" />
-      <point x="290.75" y="56.0" />
-      <point x="-23.0" y="15.5" />
-    </edge>
     <edge source="org.apache.shiro.web.config.IniFilterChainResolverFactory" target="org.apache.shiro.config.IniFactorySupport">
       <point x="0.0" y="-15.5" />
       <point x="345.5" y="218.0" />
       <point x="268.75" y="218.0" />
       <point x="38.25" y="15.5" />
     </edge>
+    <edge source="org.apache.shiro.util.AbstractFactory" target="org.apache.shiro.util.Factory">
+      <point x="0.0" y="-15.5" />
+      <point x="230.5" y="56.0" />
+      <point x="290.75" y="56.0" />
+      <point x="-23.0" y="15.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="294.0" y="176.5" />
-  <SelectedNodes>
-    <node>org.apache.shiro.util.Factory</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0" x="294.0" y="177.0" />
+  <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>

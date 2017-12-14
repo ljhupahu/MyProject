@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.web.filter.mgt.FilterChainResolver</OriginalElement>
+  <nodes>
+    <node x="37.5" y="0.0">org.apache.shiro.web.filter.mgt.FilterChainResolver</node>
+    <node x="0.0" y="80.0">org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver" target="org.apache.shiro.web.filter.mgt.FilterChainResolver">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="81.0" y="15.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

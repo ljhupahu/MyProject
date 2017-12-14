@@ -1,0 +1,3 @@
+@startuml
+FilterChainResolver -> FilterChainManager: A FilterChainManager manages the creation \nand modification of Filter chains from an available pool of filter instances.
+@enduml

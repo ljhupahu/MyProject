@@ -1,0 +1,42 @@
+@startuml
+
+interface Environment{
+    SecurityManager getSecurityManager();
+}
+
+interface WebEnvironment{
+
+}
+
+interface FilterChainResolver{
+    FilterChain getChain(ServletRequest request, ServletResponse response, FilterChain originalChain)
+}
+
+
+interface FilterChainManager{
+Map<String, Filter> getFilters();
+    FilterChain proxy(FilterChain original, String chainName);
+}
+note top of FilterChainManager : A FilterChainManager manages \nthe creation and modification of Filter chains from \nan available pool of Filter instances.
+
+interface FilterChain{
+    doFilter ( ServletRequest request, ServletResponse response )
+}
+
+
+FilterChainResolver <|..  PathMatchingFilterChainResolver
+
+FilterChainResolver o- FilterChainManager
+FilterChainManager <|.. DefaultFilterChainManager
+
+FilterChainManager -> FilterChain
+FilterChain <|.. ProxiedFilterChain
+
+Environment <|-- WebEnvironment
+Environment <|.. DefaultEnvironment
+DefaultEnvironment <|-- DefaultWebEnvironment
+WebEnvironment <|.. DefaultWebEnvironment
+DefaultWebEnvironment <|-- IniWebEnvironment
+
+IniWebEnvironment -> FilterChainResolver
+@enduml
