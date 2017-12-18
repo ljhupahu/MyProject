@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.session.Session</OriginalElement>
+  <nodes>
+    <node x="8.5" y="160.0">org.apache.shiro.session.mgt.SimpleSession</node>
+    <node x="12.5" y="320.0">org.apache.shiro.session.mgt.OnlineSession.OnlineStatus</node>
+    <node x="0.0" y="80.0">org.apache.shiro.session.mgt.ValidatingSession</node>
+    <node x="496.0" y="80.0">org.apache.shiro.session.ProxiedSession</node>
+    <node x="9.0" y="240.0">org.apache.shiro.session.mgt.OnlineSession</node>
+    <node x="162.0" y="80.0">org.apache.shiro.web.session.HttpServletSession</node>
+    <node x="274.6" y="0.0">org.apache.shiro.session.Session</node>
+    <node x="330.0" y="80.0">org.apache.shiro.session.mgt.DelegatingSession</node>
+    <node x="575.35" y="160.0">org.apache.shiro.session.mgt.ImmutableProxiedSession</node>
+    <node x="346.35" y="160.0">org.apache.shiro.subject.support.DelegatingSubject.StoppingAwareProxiedSession</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.session.mgt.ValidatingSession" target="org.apache.shiro.session.Session">
+      <point x="0.0" y="-15.0" />
+      <point x="71.0" y="50.0" />
+      <point x="285.725" y="50.0" />
+      <point x="-33.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.OnlineSession" target="org.apache.shiro.session.mgt.SimpleSession">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.session.HttpServletSession" target="org.apache.shiro.session.Session">
+      <point x="0.0" y="-15.0" />
+      <point x="236.0" y="60.0" />
+      <point x="307.975" y="60.0" />
+      <point x="-11.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.SimpleSession" target="org.apache.shiro.session.mgt.ValidatingSession">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.ImmutableProxiedSession" target="org.apache.shiro.session.ProxiedSession">
+      <point x="0.0" y="-15.0" />
+      <point x="668.35" y="135.0" />
+      <point x="592.0" y="135.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.subject.support.DelegatingSubject.StoppingAwareProxiedSession" target="org.apache.shiro.session.ProxiedSession">
+      <point x="0.0" y="-15.0" />
+      <point x="450.85" y="135.0" />
+      <point x="528.0" y="135.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.ProxiedSession" target="org.apache.shiro.session.Session">
+      <point x="0.0" y="-15.0" />
+      <point x="560.0" y="50.0" />
+      <point x="352.475" y="50.0" />
+      <point x="33.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.DelegatingSession" target="org.apache.shiro.session.Session">
+      <point x="0.0" y="-15.0" />
+      <point x="403.0" y="60.0" />
+      <point x="330.225" y="60.0" />
+      <point x="11.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.OnlineSession.OnlineStatus" target="org.apache.shiro.session.mgt.OnlineSession">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="44.5" y="75.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

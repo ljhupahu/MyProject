@@ -23,10 +23,10 @@ public class JdbcTemplateUtils {
     private static JdbcTemplate createJdbcTemplate() {
 
         DruidDataSource ds = new DruidDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/shiro");
-        ds.setUsername("root");
-        ds.setPassword("");
+        ds.setDriverClassName("org.h2.Driver");
+        ds.setUrl("jdbc:h2:file:~/.h2/myProject;AUTO_SERVER=TRUE");
+        ds.setUsername("sa");
+        ds.setPassword("sa");
 
         return new JdbcTemplate(ds);
     }
