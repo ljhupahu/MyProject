@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.cache.CacheManagerAware</OriginalElement>
+  <nodes>
+    <node x="577.5" y="510.0">org.apache.shiro.realm.text.IniRealm</node>
+    <node x="438.1263020833333" y="160.0">org.apache.shiro.web.session.mgt.DefaultWebSessionManager</node>
+    <node x="349.5" y="350.0">com.github.zhangkaitao.shiro.chapter11.realm.UserRealm</node>
+    <node x="554.375" y="0.0">org.apache.shiro.cache.CacheManagerAware</node>
+    <node x="23.0" y="160.0">org.apache.shiro.mgt.RealmSecurityManager</node>
+    <node x="468.0" y="430.0">org.apache.shiro.realm.text.TextConfigurationRealm</node>
+    <node x="1205.5" y="350.0">com.github.zhangkaitao.shiro.chapter12.realm.UserRealm</node>
+    <node x="1331.5" y="350.0">com.github.zhangkaitao.shiro.chapter5.hash.realm.MyRealm</node>
+    <node x="659.5" y="350.0">com.my.shiro.chapter6.realm.UserRealm</node>
+    <node x="450.1263020833333" y="80.0">org.apache.shiro.session.mgt.DefaultSessionManager</node>
+    <node x="475.5" y="350.0">org.apache.shiro.realm.SimpleAccountRealm</node>
+    <node x="829.25" y="240.0">org.apache.shiro.realm.AuthorizingRealm</node>
+    <node x="1047.0" y="430.0">org.apache.shiro.realm.ldap.JndiLdapRealm</node>
+    <node x="785.5" y="350.0">com.github.zhangkaitao.shiro.chapter5.hash.realm.MyRealm2</node>
+    <node x="229.5" y="350.0">com.github.zhangkaitao.shiro.chapter3.realm.MyRealm</node>
+    <node x="1372.75" y="160.0">com.github.zhangkaitao.shiro.chapter11.session.dao.MySessionDAO</node>
+    <node x="8.5" y="350.0">org.apache.shiro.mgt.AuthorizingSecurityManager</node>
+    <node x="17.5" y="430.0">org.apache.shiro.mgt.SessionsSecurityManager</node>
+    <node x="1208.25" y="80.0">org.apache.shiro.session.mgt.eis.CachingSessionDAO</node>
+    <node x="20.5" y="510.0">org.apache.shiro.mgt.DefaultSecurityManager</node>
+    <node x="1002.75" y="160.0">org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO</node>
+    <node x="0.0" y="240.0">org.apache.shiro.mgt.AuthenticatingSecurityManager</node>
+    <node x="1451.5" y="350.0">org.apache.shiro.realm.ldap.AbstractLdapRealm</node>
+    <node x="838.25" y="80.0">org.apache.shiro.realm.CachingRealm</node>
+    <node x="1038.5" y="350.0">org.apache.shiro.realm.ldap.DefaultLdapRealm</node>
+    <node x="17.5" y="80.0">org.apache.shiro.mgt.CachingSecurityManager</node>
+    <node x="1446.0" y="430.0">org.apache.shiro.realm.activedirectory.ActiveDirectoryRealm</node>
+    <node x="421.5" y="510.0">org.apache.shiro.realm.text.PropertiesRealm</node>
+    <node x="911.5" y="350.0">org.apache.shiro.realm.jdbc.JdbcRealm</node>
+    <node x="1221.75" y="160.0">com.github.zhangkaitao.shiro.chapter10.session.dao.MySessionDAO</node>
+    <node x="820.75" y="160.0">org.apache.shiro.realm.AuthenticatingRealm</node>
+    <node x="8.5" y="590.0">org.apache.shiro.web.mgt.DefaultWebSecurityManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.session.mgt.DefaultSessionManager" target="org.apache.shiro.cache.CacheManagerAware">
+      <point x="0.0" y="-15.0" />
+      <point x="537.1263020833333" y="60.0" />
+      <point x="615.5" y="60.0" />
+      <point x="-20.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthenticatingRealm" target="org.apache.shiro.realm.CachingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.JndiLdapRealm" target="org.apache.shiro.realm.ldap.DefaultLdapRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO" target="org.apache.shiro.session.mgt.eis.CachingSessionDAO">
+      <point x="0.0" y="-15.0" />
+      <point x="1102.25" y="135.0" />
+      <point x="1234.5833333333333" y="135.0" />
+      <point x="-52.66666666666674" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthenticatingSecurityManager" target="org.apache.shiro.mgt.RealmSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.jdbc.JdbcRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="965.0" y="330.0" />
+      <point x="909.0" y="330.0" />
+      <point x="7.25" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter10.session.dao.MySessionDAO" target="org.apache.shiro.session.mgt.eis.CachingSessionDAO">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.activedirectory.ActiveDirectoryRealm" target="org.apache.shiro.realm.ldap.AbstractLdapRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.CachingRealm" target="org.apache.shiro.cache.CacheManagerAware">
+      <point x="0.0" y="-15.0" />
+      <point x="901.75" y="60.0" />
+      <point x="656.25" y="60.0" />
+      <point x="20.375" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.SessionsSecurityManager" target="org.apache.shiro.mgt.AuthorizingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.DefaultSecurityManager" target="org.apache.shiro.mgt.SessionsSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.session.mgt.DefaultWebSessionManager" target="org.apache.shiro.session.mgt.DefaultSessionManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.AbstractLdapRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="1528.0" y="290.0" />
+      <point x="967.0" y="290.0" />
+      <point x="65.25" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter3.realm.MyRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="279.5" y="290.0" />
+      <point x="836.5" y="290.0" />
+      <point x="-65.25" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.AuthorizingRealm" target="org.apache.shiro.realm.AuthenticatingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter5.hash.realm.MyRealm2" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="838.5" y="330.0" />
+      <point x="894.5" y="330.0" />
+      <point x="-7.25" y="15.0" />
+    </edge>
+    <edge source="com.my.shiro.chapter6.realm.UserRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="712.5" y="320.0" />
+      <point x="880.0" y="320.0" />
+      <point x="-21.75" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter12.realm.UserRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="1258.5" y="310.0" />
+      <point x="938.0" y="310.0" />
+      <point x="36.25" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.AuthorizingSecurityManager" target="org.apache.shiro.mgt.AuthenticatingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.SimpleAccountRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="557.5" y="310.0" />
+      <point x="865.5" y="310.0" />
+      <point x="-36.25" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.ldap.DefaultLdapRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="1112.0" y="320.0" />
+      <point x="923.5" y="320.0" />
+      <point x="21.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.RealmSecurityManager" target="org.apache.shiro.mgt.CachingSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.TextConfigurationRealm" target="org.apache.shiro.realm.SimpleAccountRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.session.mgt.eis.CachingSessionDAO" target="org.apache.shiro.cache.CacheManagerAware">
+      <point x="0.0" y="-15.0" />
+      <point x="1287.25" y="50.0" />
+      <point x="697.0" y="50.0" />
+      <point x="61.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.IniRealm" target="org.apache.shiro.realm.text.TextConfigurationRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="625.5" y="485.0" />
+      <point x="602.25" y="485.0" />
+      <point x="44.75" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter11.realm.UserRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="402.5" y="300.0" />
+      <point x="851.0" y="300.0" />
+      <point x="-50.75" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter5.hash.realm.MyRealm" target="org.apache.shiro.realm.AuthorizingRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="1381.5" y="300.0" />
+      <point x="952.5" y="300.0" />
+      <point x="50.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.mgt.DefaultWebSecurityManager" target="org.apache.shiro.mgt.DefaultSecurityManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.github.zhangkaitao.shiro.chapter11.session.dao.MySessionDAO" target="org.apache.shiro.session.mgt.eis.CachingSessionDAO">
+      <point x="0.0" y="-15.0" />
+      <point x="1438.25" y="135.0" />
+      <point x="1339.9166666666667" y="135.0" />
+      <point x="52.66666666666674" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.mgt.CachingSecurityManager" target="org.apache.shiro.cache.CacheManagerAware">
+      <point x="0.0" y="-15.0" />
+      <point x="109.0" y="50.0" />
+      <point x="574.75" y="50.0" />
+      <point x="-61.125" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.realm.text.PropertiesRealm" target="org.apache.shiro.realm.text.TextConfigurationRealm">
+      <point x="0.0" y="-15.0" />
+      <point x="489.5" y="485.0" />
+      <point x="512.75" y="485.0" />
+      <point x="-44.75" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="645.5" y="375.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

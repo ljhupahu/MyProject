@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.cache.Cache</OriginalElement>
+  <nodes>
+    <node x="127.0" y="80.0">org.apache.shiro.cache.ehcache.EhCache</node>
+    <node x="0.0" y="80.0">org.apache.shiro.cache.MapCache</node>
+    <node x="72.75" y="0.0">org.apache.shiro.cache.Cache</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.cache.MapCache" target="org.apache.shiro.cache.Cache">
+      <point x="0.0" y="-15.0" />
+      <point x="53.5" y="55.0" />
+      <point x="93.5" y="55.0" />
+      <point x="-20.75" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.cache.ehcache.EhCache" target="org.apache.shiro.cache.Cache">
+      <point x="0.0" y="-15.0" />
+      <point x="175.0" y="55.0" />
+      <point x="135.0" y="55.0" />
+      <point x="20.75" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="118.5" y="15.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

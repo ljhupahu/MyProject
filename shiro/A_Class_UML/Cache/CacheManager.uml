@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.cache.CacheManager</OriginalElement>
+  <nodes>
+    <node x="143.75" y="0.0">org.apache.shiro.cache.CacheManager</node>
+    <node x="32.5" y="80.0">org.apache.shiro.cache.AbstractCacheManager</node>
+    <node x="0.0" y="160.0">org.apache.shiro.cache.MemoryConstrainedCacheManager</node>
+    <node x="226.5" y="80.0">org.apache.shiro.cache.ehcache.EhCacheManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.cache.MemoryConstrainedCacheManager" target="org.apache.shiro.cache.AbstractCacheManager">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.cache.AbstractCacheManager" target="org.apache.shiro.cache.CacheManager">
+      <point x="0.0" y="-15.0" />
+      <point x="119.5" y="55.0" />
+      <point x="176.25" y="55.0" />
+      <point x="-32.5" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.cache.ehcache.EhCacheManager" target="org.apache.shiro.cache.CacheManager">
+      <point x="0.0" y="-15.0" />
+      <point x="298.0" y="55.0" />
+      <point x="241.25" y="55.0" />
+      <point x="32.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="65.0" y="15.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
