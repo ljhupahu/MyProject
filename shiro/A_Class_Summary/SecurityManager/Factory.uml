@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.util.Factory</OriginalElement>
+  <nodes>
+    <node x="392.25" y="292.0">org.apache.shiro.config.IniFactorySupport</node>
+    <node x="0.0" y="570.0">org.apache.shiro.config.IniSecurityManagerFactory</node>
+    <node x="592.0" y="680.0">org.apache.shiro.web.config.IniFilterChainResolverFactory</node>
+    <node x="588.0" y="0.0">org.apache.shiro.util.Factory</node>
+    <node x="676.25" y="102.0">org.apache.shiro.jndi.JndiObjectFactory</node>
+    <node x="133.5" y="1068.0">org.apache.shiro.web.config.WebIniSecurityManagerFactory</node>
+    <node x="413.25" y="113.0">org.apache.shiro.util.AbstractFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.web.config.WebIniSecurityManagerFactory" target="org.apache.shiro.config.IniSecurityManagerFactory">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="224.0" />
+    </edge>
+    <edge source="org.apache.shiro.jndi.JndiObjectFactory" target="org.apache.shiro.util.Factory">
+      <point x="0.0" y="-70.0" />
+      <point x="791.25" y="77.0" />
+      <point x="700.5" y="77.0" />
+      <point x="37.5" y="26.0" />
+    </edge>
+    <edge source="org.apache.shiro.config.IniFactorySupport" target="org.apache.shiro.util.AbstractFactory">
+      <point x="0.0" y="-114.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="org.apache.shiro.config.IniSecurityManagerFactory" target="org.apache.shiro.config.IniFactorySupport">
+      <point x="0.0" y="-224.0" />
+      <point x="286.0" y="545.0" />
+      <point x="463.5" y="545.0" />
+      <point x="-71.25" y="114.0" />
+    </edge>
+    <edge source="org.apache.shiro.util.AbstractFactory" target="org.apache.shiro.util.Factory">
+      <point x="0.0" y="-59.0" />
+      <point x="534.75" y="77.0" />
+      <point x="625.5" y="77.0" />
+      <point x="-37.5" y="26.0" />
+    </edge>
+    <edge source="org.apache.shiro.web.config.IniFilterChainResolverFactory" target="org.apache.shiro.config.IniFactorySupport">
+      <point x="0.0" y="-114.0" />
+      <point x="783.5" y="545.0" />
+      <point x="606.0" y="545.0" />
+      <point x="71.25" y="114.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9480206540447503" x="285.83478576615835" y="370.1432461873639" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
