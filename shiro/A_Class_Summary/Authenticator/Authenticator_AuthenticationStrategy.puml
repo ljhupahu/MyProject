@@ -1,0 +1,19 @@
+@startuml
+
+interface Authenticator
+Authenticator <|.. AbstractAuthenticator
+AbstractAuthenticator <|-- ModularRealmAuthenticator
+
+interface AuthenticationStrategy{
+    beforeAllAttempts(Collection<? extends Realm> realms, AuthenticationToken token);
+    beforeAttempt(Realm realm, AuthenticationToken token, AuthenticationInfo aggregate);
+    afterAttempt(Realm realm, AuthenticationToken token, AuthenticationInfo singleRealmInfo, AuthenticationInfo aggregateInfo, Throwable t);
+    afterAllAttempts(AuthenticationToken token, AuthenticationInfo aggregate);
+}
+
+Authenticator ..> AuthenticationStrategy
+AuthenticationStrategy <|.. AbstractAuthenticationStrategy
+AbstractAuthenticationStrategy <|-- FirstSuccessfulStrategy
+AbstractAuthenticationStrategy <|-- OnlyOneAuthenticatorStrategy
+AbstractAuthenticationStrategy <|-- AllSuccessfulStrategy
+@enduml

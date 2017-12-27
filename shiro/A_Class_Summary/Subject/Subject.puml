@@ -1,0 +1,16 @@
+@startuml
+
+
+interface Subject
+Subject <|.. DelegatingSubject
+interface WebSubject
+Subject  <|-- WebSubject
+DelegatingSubject <|-- WebDelegatingSubject
+WebSubject <|-- WebDelegatingSubject
+
+DelegatingSubject ..> Session
+DelegatingSubject ..> SecurityManager
+
+note right of DelegatingSubject: Subject 通过依赖Seesion, SecurityManager 来处理Subject相关的操作，\n这里采用最小知识原则， 接口隔离原则，组合聚合原则来实现Subject所需要的相关操作, \n 比如subject.login 方法进行登录， \n其会自动委托给SecurityManager.login方法进行登录
+
+@enduml
