@@ -1,7 +1,17 @@
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+actor Client
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Client -> SubjectUtils: setSecurityManager(securityManager);
+activate SubjectUtils
+    SubjectUtils -> SubjectUtils: getSubject()
+    activate SubjectUtils
+        SubjectUtils -> Subject: login(token)
+        Subject -> DefaultSecurityManager: login(subject, token)
+        DefaultSecurityManager -> AuthenticatingSecurityManager: authenticate(AuthenticationToken token)
+        AuthenticatingSecurityManager -> AbstractAuthenticator: authenticate(token);
+        AbstractAuthenticator -> ModularRealmAuthenticator: doAuthenticate(AuthenticationToken authenticationToken)
+
+    deactivate SubjectUtils
+deactivate SubjectUtils
+
 @enduml
