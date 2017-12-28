@@ -10,7 +10,15 @@ activate SubjectUtils
         DefaultSecurityManager -> AuthenticatingSecurityManager: authenticate(AuthenticationToken token)
         AuthenticatingSecurityManager -> AbstractAuthenticator: authenticate(token);
         AbstractAuthenticator -> ModularRealmAuthenticator: doAuthenticate(AuthenticationToken authenticationToken)
+        alt realms.size() == 1
+            ModularRealmAuthenticator -> AuthenticatingRealm: getAuthenticationInfo(AuthenticationToken token)
+            AuthenticatingRealm -> SimpleAccountRealm: doGetAuthenticationInfo(token)
+            SimpleAccountRealm --> AuthenticatingRealm: return AuthenticationInfo
+            AuthenticatingRealm -> AuthenticatingRealm: assertCredentialsMatch(token, info);
+            AuthenticatingRealm -> CredentialsMatcher: doCredentialsMatch(token, info)
+        else realms.size() > 1
 
+        end
     deactivate SubjectUtils
 deactivate SubjectUtils
 

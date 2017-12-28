@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.authc.AuthenticationInfo</OriginalElement>
+  <nodes>
+    <node x="215.825" y="80.0">org.apache.shiro.authc.AuthenticationInfo</node>
+    <node x="369.1125" y="250.0">org.apache.shiro.authc.SimpleAccount</node>
+    <node x="422.0" y="160.0">org.apache.shiro.authc.Account</node>
+    <node x="202.0" y="160.0">org.apache.shiro.authc.MergableAuthenticationInfo</node>
+    <node x="0.0" y="160.0">org.apache.shiro.authc.SaltedAuthenticationInfo</node>
+    <node x="78.26249999999999" y="250.0">org.apache.shiro.authc.SimpleAuthenticationInfo</node>
+    <node x="427.19999999999993" y="0.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.authc.Account" target="java.io.Serializable">
+      <point x="23.75" y="-15.0" />
+      <point x="493.25" y="55.0" />
+      <point x="481.19999999999993" y="55.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.AuthenticationInfo" target="java.io.Serializable">
+      <point x="0.0" y="-15.0" />
+      <point x="290.825" y="55.0" />
+      <point x="445.19999999999993" y="55.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAuthenticationInfo" target="org.apache.shiro.authc.SaltedAuthenticationInfo">
+      <point x="-46.5" y="-15.0" />
+      <point x="124.76249999999999" y="230.0" />
+      <point x="45.5" y="230.0" />
+      <point x="-45.5" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.Account" target="org.apache.shiro.authc.AuthenticationInfo">
+      <point x="-23.75" y="-15.0" />
+      <point x="445.75" y="135.0" />
+      <point x="340.825" y="135.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAccount" target="org.apache.shiro.authc.Account">
+      <point x="16.375" y="-15.0" />
+      <point x="450.9875" y="230.0" />
+      <point x="469.5" y="230.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.MergableAuthenticationInfo" target="org.apache.shiro.authc.AuthenticationInfo">
+      <point x="0.0" y="-15.0" />
+      <point x="302.0" y="135.0" />
+      <point x="290.825" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAccount" target="org.apache.shiro.authc.MergableAuthenticationInfo">
+      <point x="-16.375" y="-15.0" />
+      <point x="418.2375" y="210.0" />
+      <point x="352.0" y="210.0" />
+      <point x="50.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SaltedAuthenticationInfo" target="org.apache.shiro.authc.AuthenticationInfo">
+      <point x="0.0" y="-15.0" />
+      <point x="91.0" y="135.0" />
+      <point x="240.825" y="135.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAccount" target="java.io.Serializable">
+      <point x="49.125" y="-15.0" />
+      <point x="483.7375" y="230.0" />
+      <point x="527.5" y="230.0" />
+      <point x="527.5" y="55.0" />
+      <point x="517.2" y="55.0" />
+      <point x="36.00000000000006" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAuthenticationInfo" target="org.apache.shiro.authc.MergableAuthenticationInfo">
+      <point x="46.5" y="-15.0" />
+      <point x="217.7625" y="230.0" />
+      <point x="252.0" y="230.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.SimpleAccount" target="org.apache.shiro.authc.SaltedAuthenticationInfo">
+      <point x="-49.125" y="-15.0" />
+      <point x="385.4875" y="220.0" />
+      <point x="136.5" y="220.0" />
+      <point x="45.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="58.5" y="55.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

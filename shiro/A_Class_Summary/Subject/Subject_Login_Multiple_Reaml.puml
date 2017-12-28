@@ -1,0 +1,21 @@
+@startuml
+actor Client
+
+Client -> SubjectUtils: setSecurityManager(securityManager);
+activate SubjectUtils
+    SubjectUtils -> SubjectUtils: getSubject()
+    activate SubjectUtils
+        SubjectUtils -> Subject: login(token)
+        Subject -> DefaultSecurityManager: login(subject, token)
+        DefaultSecurityManager -> AuthenticatingSecurityManager: authenticate(AuthenticationToken token)
+        AuthenticatingSecurityManager -> AbstractAuthenticator: authenticate(token);
+        AbstractAuthenticator -> ModularRealmAuthenticator: doAuthenticate(AuthenticationToken authenticationToken)
+        alt realms.size() == 1
+
+        else realms.size() > 1
+
+        end
+    deactivate SubjectUtils
+deactivate SubjectUtils
+
+@enduml
