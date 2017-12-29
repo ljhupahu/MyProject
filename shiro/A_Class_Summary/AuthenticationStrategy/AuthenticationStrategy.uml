@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.authc.pam.AuthenticationStrategy</OriginalElement>
+  <nodes>
+    <node x="172.5" y="81.0">org.apache.shiro.authc.pam.AbstractAuthenticationStrategy</node>
+    <node x="392.0" y="162.0">org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy</node>
+    <node x="196.5" y="0.0">org.apache.shiro.authc.pam.AuthenticationStrategy</node>
+    <node x="201.0" y="162.0">org.apache.shiro.authc.pam.AllSuccessfulStrategy</node>
+    <node x="0.0" y="162.0">org.apache.shiro.authc.pam.FirstSuccessfulStrategy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.authc.pam.AllSuccessfulStrategy" target="org.apache.shiro.authc.pam.AbstractAuthenticationStrategy">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.authc.pam.FirstSuccessfulStrategy" target="org.apache.shiro.authc.pam.AbstractAuthenticationStrategy">
+      <point x="0.0" y="-15.5" />
+      <point x="90.5" y="137.0" />
+      <point x="210.5" y="137.0" />
+      <point x="-76.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.authc.pam.AtLeastOneSuccessfulStrategy" target="org.apache.shiro.authc.pam.AbstractAuthenticationStrategy">
+      <point x="0.0" y="-15.5" />
+      <point x="503.5" y="137.0" />
+      <point x="362.5" y="137.0" />
+      <point x="76.0" y="15.5" />
+    </edge>
+    <edge source="org.apache.shiro.authc.pam.AbstractAuthenticationStrategy" target="org.apache.shiro.authc.pam.AuthenticationStrategy">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="244.5" y="55.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -13,7 +13,13 @@ activate SubjectUtils
         alt realms.size() == 1
 
         else realms.size() > 1
-
+            ModularRealmAuthenticator -> AuthenticationStrategy:getAuthenticationStrategy()
+            loop realms.size
+                AuthenticationStrategy -> AuthenticationStrategy:beforeAllAttempts(realms, token)
+                AuthenticationStrategy -> AuthenticationStrategy: beforeAttempt(Realm realm, AuthenticationToken token, AuthenticationInfo aggregate)
+                AuthenticationStrategy -> AuthenticationStrategy: afterAttempt(Realm realm, AuthenticationToken token, AuthenticationInfo singleRealmInfo, AuthenticationInfo aggregateInfo, Throwable t)
+                AuthenticationStrategy -> AuthenticationStrategy: afterAllAttempts(AuthenticationToken token, AuthenticationInfo aggregate)
+            end
         end
     deactivate SubjectUtils
 deactivate SubjectUtils
