@@ -1,7 +1,8 @@
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+Client -> Subject: isPermitted (permission)
+Subject -> AuthorizingSecurityManager: isPermitted(getPrincipals(), permission)
+AuthorizingSecurityManager -> ModularRealmAuthorizer: isPermitted(PrincipalCollection principals, String permission)
+ModularRealmAuthorizer -> AuthorizingRealm: isPermitted(PrincipalCollection principals, String permission)
+
 @enduml

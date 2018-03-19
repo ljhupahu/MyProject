@@ -4,6 +4,8 @@ import junit.framework.Assert;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.codec.Base64;
+import org.apache.shiro.codec.Hex;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
@@ -19,6 +21,19 @@ import org.junit.Test;
  * <p>Version: 1.0
  */
 public class AuthenticatorTest {
+
+    @Test
+    public void testBase64(){
+        String str = "hello";
+        String base64Encoded = Base64.encodeToString(str.getBytes());
+        String str2 = Base64.decodeToString(base64Encoded);
+        System.out.println(base64Encoded);
+
+        String base64Encoded1 = Hex.encodeToString(str.getBytes());
+                System.out.println(base64Encoded1);
+        String str21 = new String(Hex.decode(base64Encoded1.getBytes()));
+        System.out.println(str21);
+    }
 
     @Test
     public void testAllSuccessfulStrategyWithSuccess() {

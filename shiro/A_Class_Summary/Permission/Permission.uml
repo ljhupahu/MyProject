@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.authz.Permission</OriginalElement>
+  <nodes>
+    <node x="-283.0" y="-145.0">org.apache.shiro.authz.permission.AllPermission</node>
+    <node x="-455.5" y="-65.0">org.apache.shiro.authz.permission.DomainPermission</node>
+    <node x="-355.25" y="-225.0">org.apache.shiro.authz.Permission</node>
+    <node x="-458.0" y="-145.0">org.apache.shiro.authz.permission.WildcardPermission</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.authz.permission.DomainPermission" target="org.apache.shiro.authz.permission.WildcardPermission">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authz.permission.WildcardPermission" target="org.apache.shiro.authz.Permission">
+      <point x="0.0" y="-15.0" />
+      <point x="-380.5" y="-170.0" />
+      <point x="-328.25" y="-170.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authz.permission.AllPermission" target="org.apache.shiro.authz.Permission">
+      <point x="0.0" y="-15.0" />
+      <point x="-222.0" y="-170.0" />
+      <point x="-274.25" y="-170.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="136.5" y="25.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

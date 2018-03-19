@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.apache.shiro.authc.AuthenticationToken</OriginalElement>
+  <nodes>
+    <node x="0.0" y="160.0">org.apache.shiro.authc.RememberMeAuthenticationToken</node>
+    <node x="141.5" y="240.0">org.apache.shiro.authc.UsernamePasswordToken</node>
+    <node x="153.5" y="80.0">org.apache.shiro.authc.AuthenticationToken</node>
+    <node x="257.0" y="160.0">org.apache.shiro.authc.HostAuthenticationToken</node>
+    <node x="180.5" y="0.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.apache.shiro.authc.UsernamePasswordToken" target="org.apache.shiro.authc.HostAuthenticationToken">
+      <point x="46.5" y="-15.0" />
+      <point x="281.0" y="215.0" />
+      <point x="350.5" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.RememberMeAuthenticationToken" target="org.apache.shiro.authc.AuthenticationToken">
+      <point x="0.0" y="-15.0" />
+      <point x="118.5" y="135.0" />
+      <point x="194.0" y="135.0" />
+      <point x="-40.5" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.AuthenticationToken" target="java.io.Serializable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.UsernamePasswordToken" target="org.apache.shiro.authc.RememberMeAuthenticationToken">
+      <point x="-46.5" y="-15.0" />
+      <point x="188.0" y="215.0" />
+      <point x="118.5" y="215.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.apache.shiro.authc.HostAuthenticationToken" target="org.apache.shiro.authc.AuthenticationToken">
+      <point x="0.0" y="-15.0" />
+      <point x="350.5" y="135.0" />
+      <point x="275.0" y="135.0" />
+      <point x="40.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="81.0" y="55.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
