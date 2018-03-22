@@ -12,6 +12,7 @@
         <module>shiro</module>
         <module>guava</module>
         <module>java</module>
+        <module>design</module>
 
     </modules>
 

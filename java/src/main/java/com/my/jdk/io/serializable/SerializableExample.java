@@ -30,7 +30,7 @@ public class SerializableExample {
             ObjectInputStream ooi=new ObjectInputStream(new FileInputStream("D:\\Temp1\\Temp\\tmp.txt"));
             try {
                 Object obj=ooi.readObject();
-                StudentMate s=(StudentMate)obj;
+                Student s=(Student)obj;
                 //person s=(person)obj;
                 System.out.println("id:"+s.getId()+",name:"+s.getName()+s.countryName);
             } catch (ClassNotFoundException e) {
