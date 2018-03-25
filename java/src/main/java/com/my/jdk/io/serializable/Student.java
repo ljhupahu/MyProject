@@ -7,11 +7,13 @@ import java.io.Serializable;
  */
 public class Student implements Serializable {
     private static final long serialVersionUID = 123456789L;
+
     public static  String countryName="china";
     private int id;
     private String name;
     private String sex;
     transient private int aga;
+    private Subject subject;
 
     public int getAga() {
         return aga;
@@ -53,5 +55,13 @@ public class Student implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 }

@@ -7,8 +7,8 @@ import java.io.*;
  */
 public class SerializableExample {
     public static void main(String[] args) {
-//        writeObj();
-        readObj();
+        writeObj();
+//        readObj();
     }
     public static  void writeObj()
     {
@@ -16,8 +16,14 @@ public class SerializableExample {
         s.setId(8);
         s.setName("张三");
         s.countryName="USA";
+
+        Subject subject = new Subject();
+        subject.setName("Chinese");
+
+        s.setSubject(subject);
+
         try {
-            ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("D:\\Temp1\\Temp\\tmp.txt"));
+            ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("D:\\Temp\\Temp\\tmp.txt"));
             oos.writeObject(s);
             oos.close();
         } catch (IOException e) {
@@ -27,7 +33,7 @@ public class SerializableExample {
     public  static  void  readObj()
     {
         try {
-            ObjectInputStream ooi=new ObjectInputStream(new FileInputStream("D:\\Temp1\\Temp\\tmp.txt"));
+            ObjectInputStream ooi=new ObjectInputStream(new FileInputStream("D:\\Temp\\Temp\\tmp.txt"));
             try {
                 Object obj=ooi.readObject();
                 Student s=(Student)obj;
