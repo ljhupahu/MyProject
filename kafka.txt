@@ -1,0 +1,38 @@
+kafka_2.11-0.8.2.2.tgz
+ tar -xvf kafka_2.11-0.8.2.2.tar
+
+使用kafka自带的zookeeper来进行演示
+
+自带zookeeper的方式：
+Start zookeeper Server:
+bin/zookeeper-server-start.sh config/zookeeper.properties
+port:2181
+
+Start kafka Server:
+
+[root@localhost kafka_2.11-0.8.2.2]# bin/kafka-server-start.sh config/server.properties
+通过  [root@localhost ~]# lsof -i:9092 来检验端口（9092）来是否启动
+
+[root@localhost ~]# lsof -i:9092
+COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    4088 root   52u  IPv6  39708      0t0  TCP *:XmlIpcRegSvc (LISTEN)
+java    4088 root   53u  IPv6  39709      0t0  TCP localhost:51991->localhost:XmlIpcRegSvc (ESTABLISHED)
+java    4088 root   57u  IPv6  39711      0t0  TCP localhost:XmlIpcRegSvc->localhost:51991 (ESTABLISHED)
+[root@localhost ~]# lsof -i:2181
+COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    3838 root   38u  IPv6  34941      0t0  TCP *:eforward (LISTEN)
+java    3838 root   39u  IPv6  39701      0t0  TCP localhost:eforward->localhost:39095 (ESTABLISHED)
+java    4088 root   37u  IPv6  39700      0t0  TCP localhost:39095->localhost:eforward (ESTABLISHED)
+
+---------
+
+Create topic:
+ [root@localhost bin]# ./kafka-topics.sh --zookeeper localhost:2181 --create --topic test1 --partitions 3 --replication-factor 1
+
+ Display topic:
+ [root@localhost bin]# ./kafka-topics.sh --zookeeper localhost:2181 --describe --topic test1
+
+Create consumer:
+ [root@localhost bin]# ./kafka-console-consumer.sh --zookeeper localhost:2181 --topic test1
+Create producer:
+[root@localhost bin]# ./kafka-console-producer.sh --broker-list localhost:9092 --topic test1 
